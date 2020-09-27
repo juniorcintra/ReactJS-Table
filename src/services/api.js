@@ -1,31 +1,16 @@
 import axios from "axios";
-import querystring from "querystring";
-
-const headers = {
-  Accept: "application/json",
-};
+import { getToken } from "./auth";
 
 const api = axios.create({
-  baseURL: "http://localhost:3333/",
+  baseURL: "http://127.0.0.1:3333",
 });
 
-const queryBuilder = (params) => {
-  const cleanParams = {};
-  Object.keys(params).forEach((key) => {
-    const value = params[key];
-    if (value) cleanParams[key] = value;
-  });
-  return querystring.stringify(cleanParams);
-};
-
-const makeOptions = (authData) => ({
-  headers: {
-    ...headers,
-    ...(authData && {
-      Authorization: `Bearer ${authData.token}`,
-    }),
-  },
+api.interceptors.request.use(async (config) => {
+  const token = getToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
 });
 
 export default api;
-export { makeOptions, queryBuilder };
