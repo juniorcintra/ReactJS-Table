@@ -8,21 +8,21 @@ Banco de Dados MySQL
 
 API hospedada no Heroku para facilitar a execução do teste e banco de dados hospedado no servidor que tenho para o meu TCC da faculdade.
 
-### Para o Front-End
+## Para o Front-End
 
-## Caso tenha o Yarn configurado:
+### Caso tenha o Yarn configurado:
 
 rodar yarn para instalar das dependencias.
 
 rodar yarn start para executar a aplicação.
 
-## Caso não tenha:
+### Caso não tenha:
 
 rodar npm i para instalar das dependencias.
 
 rodar npm start para executar a aplicação.
 
-### Para o Back-End
+## Para o Back-End
 
 Para nao precisar configurar o AdonisJS na máquina para poder rodar a aplicação, tomei a liberdade de hospedar no Heroku onde já hospedo a API do meu TCC, para já facilitar a execução.
 
