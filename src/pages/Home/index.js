@@ -6,7 +6,9 @@ import Modal from "react-modal";
 import { AiOutlineEdit, AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import { Container, overlayStyle, contentStyle, Form } from "./styles";
 
-export default function Home() {
+import { logout } from "../../services/auth";
+
+export default function Home({ history }) {
   const [clientes, setClientes] = useState();
   const [openAdd, setOpenAdd] = useState(false);
   const [openEdit, setOpenEdit] = useState(false);
@@ -73,12 +75,18 @@ export default function Home() {
     }
   }
 
+  function handleLogout() {
+    logout();
+    history.push("/");
+  }
+
   useEffect(() => {
     handleClientes();
   }, []);
 
   return (
     <Container>
+      <button onClick={() => handleLogout()}>Sair</button>
       <table>
         <tr>
           <th>Nome</th>
