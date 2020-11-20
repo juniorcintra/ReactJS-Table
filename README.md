@@ -3,7 +3,7 @@ Projeto teste para a vaga de Desenvolvedor React Pleno
 ## Desenvolvimento:
 
 Front-End desenvolvido em ReactJs<br/>
-Back-End desenvolvido em AdonisJs (link do repositorio: https://github.com/juniorcintra/react_table_api)<br/>
+Back-End desenvolvido em AdonisJs (link do repositorio: https://github.com/juniorcintra/ReactJS-Table-API-AdonisJS)<br/>
 Banco de Dados MySQL
 
 API hospedada no Heroku para facilitar a execução do teste e banco de dados hospedado no servidor que tenho para o meu TCC da faculdade.
